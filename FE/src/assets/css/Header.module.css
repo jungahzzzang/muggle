@@ -1,0 +1,82 @@
+header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 6rem;
+  z-index: 10;
+  background-color: #1b263b;
+}
+.banner_inner {
+  padding: 0 3rem;
+  position: relative;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.logo_area {
+  width: 100px;
+  height: 90px;
+  text-decoration: none;
+}
+
+.logo_img {
+  display: block;
+  width: 115.5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+nav > a {
+  color: white;
+  margin-right: 3rem;
+  font-size: 1.3rem;
+  /* font-weight: bold; */
+}
+nav > a:hover,
+div > a:hover {
+  color: #f89e86;
+}
+.homepage > svg {
+  fill: #f89e86;
+  width: 2rem;
+}
+.log {
+  display: flex;
+  align-items: center;
+}
+div > a {
+  color: white;
+  margin-left: 3rem;
+  font-size: 1.3rem;
+}
+.name {
+  color: #f89e86;
+  border: solid #f89e86;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+.auth_button {
+  background-color: white;
+  border: 2px solid #f89e86;
+  color: #f89e86;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-left: 0.8rem;
+}
+
+.auth_button:hover {
+  background-color: #f89e86;
+  color: white;
+}
+.auth_button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(248, 158, 134, 0.5);
+}

@@ -1,0 +1,147 @@
+.wrapper {
+  padding: 20px;
+}
+
+.floor {
+  text-align: center;
+}
+
+.stage {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: #444;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.map {
+  position: relative;
+  height: 800px;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.seat {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: #ffe07d;
+  border: 1px solid #aaa;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.seat:hover {
+  transform: scale(1.2);
+  background-color: #d7d7d7;
+}
+
+.tabs {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.tab {
+  all: unset;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 6px;
+  color: black;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.tab:hover {
+  color: #1b263b;
+}
+
+.activeTab {
+  color: #1b263b;         
+  border-bottom: 2px solid #1b263b;
+  font-weight: bold;
+}
+
+.seat.wheelchair {
+  background-color: #efefef;
+}
+
+/*좌석 색깔*/
+.noRating {
+  background-color: #efefef; /* 회색 */
+}
+
+.ratingExcellent {
+  background-color: #4caf50; /* 초록 */
+}
+
+.ratingGood {
+  background-color: #8bc34a; /* 연두 */
+}
+
+.ratingAverage {
+  background-color: #ffc107; /* 노랑 */
+}
+
+.ratingPoor {
+  background-color: #f44336; /* 빨강 */
+}
+
+.legendWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.legendBox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.legend span {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+.ratingWorst {
+  background-color: #e53935; /* 진빨강 */
+}
+.ratingVeryPoor {
+  background-color: #fb8c00; /* 진주황 */
+}
+.ratingPoor {
+  background-color: #fdd835; /* 노랑 */
+}
+.ratingAverage {
+  background-color: #aed581; /* 연초록 */
+}
+.ratingGood {
+  background-color: #66bb6a; /* 초록 */
+}
+.ratingExcellent {
+  background-color: #388e3c; /* 진초록 */
+}

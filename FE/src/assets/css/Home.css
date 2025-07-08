@@ -1,0 +1,767 @@
+:root {
+  --primary-color1: #c13870;
+  --primary-color2: #540d18;
+  --light-color1: #f5e0c9;
+  --bs-link-color: #000;
+  --swiper-theme-color: var(--primary-color1) !important;
+}
+
+/* COMMON: */
+#ranksCarouselBox p,
+#newCarouselBox p,
+#genresCarouselBox p {
+  margin: 0;
+  padding: 0;
+}
+
+#ranksCarouselBox a:hover,
+#newCarouselBox a:hover,
+#genresCarouselBox a:hover:not(.nav-item a) {
+  color: black;
+}
+
+.title1 {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 2%;
+  text-align: center;
+}
+
+.theaterInfoMsg{
+  text-align: center;
+  color: #979797;
+}
+
+.mainInner {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+
+.musicalBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.musicalBox .posterBox {
+  position: relative;
+  height: 60%;
+  margin-top: 20px;
+}
+
+.musicalBox .posterBox img {
+  width: 225px;
+  height: 300px !important;
+  border-radius: 4px;
+}
+
+.musicalBox .posterBox img::after {
+  content: 'counter';
+  position: absolute;
+  left: 9px;
+  bottom: -4px;
+  font-weight: 400;
+  font-size: 50px;
+  font-style: italic;
+  color: #fff;
+  line-height: 1em;
+  z-index: 3;
+  text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.45);
+}
+
+
+/* 메인-랜딩슬라이드(Carousel0): */
+#landingCarouselBox {
+  position: relative;
+}
+
+#landingCarouselBox .txtBox {
+  position: absolute;
+  left: 10%;
+  color: white;
+  text-align: left;
+}
+
+#landingCarouselBox .txtBox strong {
+  display: block;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.25px;
+  color: var(--primary-color1);
+  margin-bottom: 25px;
+  /* -webkit-text-stroke: 3px var(--primary-color1); */
+}
+#landingCarouselBox .txtBox p {
+  font-size: 24px;
+  letter-spacing: -0.5px;
+  line-height: 1.7;
+  color: #fff;
+}
+
+#landingCarouselBox .txtBox button {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: var(--primary-color1);
+  font-weight: bold;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  font-size: 18px;
+  margin-right: 50px;
+  background-color: transparent;
+}
+
+#landingCarouselBox .txtBox button:hover {
+  background: var(--primary-color1);
+  color: #fefeff;
+  box-shadow: 0 0 5px var(--primary-color1),
+    0 0 25px var(--primary-color1),
+    0 0 50px var(--primary-color1),
+    0 0 200px var(--primary-color1);
+  -webkit-box-reflect: below 1px linear-gradient(transparent);
+}
+#landingCarouselBox button span{
+  position: absolute;
+  display: block;
+}
+#landingCarouselBox button span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,var(--primary-color1));
+  animation: animate1 2s linear infinite;
+}
+#landingCarouselBox button span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,var(--primary-color1));
+  animation: animate2 2s linear infinite;
+  animation-delay: 1.25s;
+}
+#landingCarouselBox button span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,var(--primary-color1));
+  animation: animate3 2s linear infinite;
+  animation-delay: 1.50s;
+}
+#landingCarouselBox button span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,var(--primary-color1));
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.75s;
+}
+
+@keyframes animate1{
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
+  }
+}
+#landingCarouselBox .swiper.swiper-initialized.swiper-horizontal.mySwiper2.swiper-backface-hidden .swiper-wrapper img {
+  cursor: pointer;
+  width: 100%;
+  height: 80vh;
+}
+
+#landingCarouselBox .swiper-horizontal.swiper-free-mode.mySwiper.swiper-thumbs {
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  height: 52px;
+}
+
+#landingCarouselBox .swiper.mySwiper.swiper-thumbs .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#landingCarouselBox .swiper.mySwiper.swiper-thumbs .swiper-wrapper>div {
+  cursor: pointer;
+  width: 52px !important;
+  height: 52px !important;
+}
+
+#landingCarouselBox .swiper-thumbs>div:not(:last-child) {
+  margin-right: 15px !important;
+}
+
+#landingCarouselBox .swiper.mySwiper.swiper-thumbs .swiper-wrapper .swiper-slide-thumb-active img {
+  border: 2px solid hsla(0, 0%, 100%, .7);
+}
+
+#landingCarouselBox .swiper.mySwiper.swiper-thumbs .swiper-wrapper div:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid hsla(0, 0%, 100%, .6);
+  border-radius: 6px;
+  z-index: 1;
+  box-sizing: border-box
+}
+
+#landingCarouselBox .swiper.mySwiper.swiper-thumbs .swiper-wrapper div img {
+  height: 52px;
+  border-radius: 6px;
+}
+
+/* MOUSE SCROLL 스크롤다운:*/
+.scrollDownBox {
+  z-index: 8;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  width: 100px;
+  height: 160px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollDownBox p {
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  margin-bottom: 8px;
+}
+
+.scrollDownBox .mouseDown {
+  font-size: 22px;
+  border: 3px solid var(--primary-color1);
+  display: block;
+  width: 20px;
+  height: 30px;
+  border-radius: 0.9em;
+  margin: 0 auto;
+  text-decoration: none;
+  transition: border 0.2s ease-out;
+}
+
+.scrollDownBox .mouseDown:hover {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.scrollDownBox .mouseDown span {
+  display: block;
+  background-color: var(--primary-color1);
+  width: 4px;
+  height: 4px;
+  margin: 8px auto 0;
+  border-radius: 0.4em;
+}
+
+.scrollDownBox .mouseDown span {
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+  animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.scrollDownBox .mouseDown:hover span {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+}
+
+@-webkit-keyframes scroll {
+
+  0%,
+  20% {
+    -webkit-transform: translateY(0) scaleY(1);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(1.2em) scaleY(1.5);
+    opacity: 0.01;
+  }
+}
+
+@keyframes scroll {
+
+  0%,
+  20% {
+    transform: translateY(0) scaleY(1);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(1.2em) scaleY(1.5);
+    opacity: 0.01;
+  }
+}
+
+
+/* 메인-순위캐러셀: */
+#ranksCarouselBox {
+  padding: 100px 2% 5%;
+  width: 100%;
+  height: 100%;
+}
+
+#ranksCarouselBox .swiper .movieBox .posterBox {
+  position: relative;
+}
+
+#ranksCarouselBox .swiper .movieBox .posterBox .ranknum {
+  position: absolute;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 54px;
+  left: 10%;
+  bottom: 0;
+}
+
+/* 랜딩후크용1: */
+.landingBox1 {
+  position: relative;
+  background: url(https://cdn.pixabay.com/photo/2018/06/17/10/38/artist-3480274_1280.jpg) #45434c no-repeat center center fixed;
+  background-size: 100%;
+  max-height: 45dvh;
+  height: 350px;
+  background-position: bottom;
+}
+
+/* .landingBox1::before {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, #333333 90%);
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .6;
+} */
+.landingBox1 .landingInner {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  height: 100%;
+  width: 1080px;
+  margin: 0 auto;
+  padding: 2% 10dvw;
+}
+
+.landingBox1 .landingInner .content {
+  display: flex;
+}
+
+.landingBox1 .landingInner .content .left {
+  width: 50%;
+}
+
+.landingBox1 .landingInner .content .left .titleBold1 {
+  font-weight: bold;
+  font-size: 38px;
+}
+
+.landingBox1 .landingInner .content .left .titleThin1 {
+  font-size: 24px;
+}
+
+.landingBox1 .landingInner .content button {
+  background-color: var(--primary-color1);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.landingBox1 .landingInner .content img {
+  height: 15dvh;
+}
+
+/* 랜딩후크용2: */
+.landingBox2 {
+  position: relative;
+  background: url(https://cdn.pixabay.com/photo/2019/07/25/10/43/ballerina-4362282_1280.jpg) #45434c no-repeat center 85%;
+  background-size: cover;
+  height: 400px;
+}
+
+.landingBox2::after {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 55%, #5e5842 85%);
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .6;
+}
+
+.landingBox2 .landingInner {
+  display: flex;
+  justify-content: end;
+  color: white;
+  align-items: center;
+  height: 100%;
+  width: 1080px;
+  margin: 0 auto;
+  padding: 2% 5%;
+}
+
+.landingBox2 .landingInner .titleThin1 {
+  font-size: 24px;
+}
+
+.landingBox2 .landingInner .titleBold1 {
+  font-weight: bold;
+  color: var(--primary-color1);
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 55px;
+  line-height: 1.1;
+  letter-spacing: -0.25px;
+  margin-bottom: 25px;
+}
+
+/* 메인-장르별공연(Carousel1): */
+#genresCarouselBox {
+  padding: 50px 2% 5%;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  position: relative;
+  background: #edfbfa linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(232, 232, 232, 0.37));
+}
+
+#genresCarouselBox .sliderTabs {
+  display: flex;
+  justify-content: center;
+}
+
+#genresCarouselBox .sliderTabs .nav-link {
+  border-radius: 3.2rem !important;
+  cursor: pointer;
+  padding: 6px 16px;
+  height: 40px;
+  font-size: 17px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+}
+
+#genresCarouselBox .sliderTabs .nav-link.active {
+  font-weight: bold;
+  background-color: rgba(198, 99, 133, .8);
+}
+
+.sliderTabs .nav-item {
+  margin-right: 1%;
+}
+
+#genresCarouselBox .swiper {
+  padding-bottom: 40px !important;
+}
+
+#genresCarouselBox .nav {
+  --bs-nav-link-hover-color: none;
+  margin: 2% auto;
+  overflow: hidden;
+}
+
+
+@media all and (min-width:1600px){ 
+  #ranksCarouselBox{padding: 15dvh 2% 5%;}
+} 
+
+@media all and (max-width:1599px) { 
+} 
+
+@media all and (max-width:1279px) { 
+} 
+
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
+@media all and (max-width:1023px) {
+  #landingCarouselBox .swiper.swiper-initialized.swiper-horizontal.mySwiper2.swiper-backface-hidden .swiper-wrapper img{height: 100dvh;}
+  #ranksCarouselBox, #newCarouselBox{padding: 74px 5% 10%;}
+  #container .swiper-wrapper{padding: 0 1%;}
+  #container .swiper-button-next,#container .swiper-button-prev{width: 35px !important;
+    height: 35px !important;}
+  #container .swiper-button-next:after,#container .swiper-button-prev:after{font-size: 12px !important;}
+  #container .mainInner h1.title1{font-size: 24px;}
+  #container .musicalInfoBox, #container .musicalBox .musicalInfoBox strong.musicalName, #container .musicalBox .musicalInfoBox span{width: 150px !important;}
+  #container .musicalBox .posterBox img{
+    max-width: 150px !important;
+    height: 200px !important;}
+} 
+
+/* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/ 
+@media all and (max-width:767px) {
+  #ranksCarouselBox, #newCarouselBox{padding: 74px 5% 10% !important;}
+  #container .swiper-wrapper{padding: 0 1%;}
+  #container .mainInner h1.title1{font-size: 22px;}
+  #container .musicalInfoBox,#container .musicalBox .musicalInfoBox strong.musicalName,#container .musicalBox .musicalInfoBox span{width: 120px !important;}
+  #container .musicalBox .posterBox img{
+    max-width: 120px !important;
+    height: 150px !important;}
+  #container .mainInner h1.title1{font-size: 24px;}
+} 
+
+/* 오픈 공연 캐러셀 NEW CAROUSEL CAROUSEL3: */
+#newCarouselBox {
+  width: 100%;
+  height: 100%;
+  padding: 50px 2% 5%;
+}
+
+#newCarouselBox .mainInner2 {
+  max-width: 890px;
+  margin: 0 auto;
+}
+
+#newCarouselBox .mainInner2 .swiper-button-next {
+  transform: translateX(5px);
+  right: 0;
+}
+
+#newCarouselBox .movieBox .posterBox span.badge {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.banners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 32px solid #f0f4f4;
+  margin-top: 28px;
+  padding-bottom: 4%;
+}
+
+.banners .banner {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  margin-right: 2%;
+  width: 310px;
+  height: 120px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  align-items: center;
+  padding: 2dvw 3dvh;
+}
+
+.banners .banner .txtBox h2 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -1.8px;
+}
+
+.banners .banner .txtBox p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.banners .banner .imgBox {
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banners .banner:first-child .imgBox img {
+  height: 26px;
+}
+
+.banners .banner:nth-child(2) .imgBox img {
+  height: 46px;
+}
+
+/* swiper 기본 css: */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .swiper-slide {
+  height: 100%;
+  text-align: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 45% !important;
+  width: 48px !important;
+  height: 48px !important;
+  transform: none;
+  background: hsla(0, 0%, 100%, 0.9);
+  color: #999;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.13);
+  border-radius: 10rem;
+  font-size: 0;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.swiper-button-next {
+  right: 0 !important;
+}
+
+.swiper-button-prev {
+  left: 0 !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: white;
+}
+
+.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0 !important;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 0;
+  bottom: 2%;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--primary-color1);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+/* 슬라이드 ul부분 */
+.slideWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.slideWrap li {
+  margin-right: 3%;
+  cursor: pointer;
+  height: 100%;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.1rem !important;
+  color: black;
+}
+
+.musicalInfoBox {
+  margin-top: 8%;
+  max-width: 200px;
+  height: 40%;
+}
+
+.musicalBox .musicalInfoBox strong {
+  width: 210px;
+  font-size: 20px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.musicalBox .musicalInfoBox span {
+  font-size: 15px;
+  display: block;
+  margin-top: 4px;
+  width: 210px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}

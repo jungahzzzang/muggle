@@ -1,0 +1,29 @@
+/* src/assets/css/PostEditPage.css */
+.thumbnail-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.remove-image-button {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  padding: 0;
+}
+
+.remove-image-button:hover {
+  background-color: #c82333;
+}

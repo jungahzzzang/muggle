@@ -1,0 +1,220 @@
+/* src/assets/css/PostsPage.css */
+.posts-container {
+  margin-top: 30px;
+  margin: 30px auto;
+  padding: 0 20px;
+  width: calc(100% - 40px);
+}
+
+.posts-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input-group {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 150px;
+}
+
+.search-button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  margin-left: 5px;
+}
+
+.sort-register-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.category-select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.sort-select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.register-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+.posts-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.posts-table th,
+.posts-table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.posts-table thead tr {
+  border-bottom: 2px solid #ccc;
+}
+
+.posts-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.posts-table .title-cell {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.post-category {
+  margin-right: 5px;
+  color: #888;
+  white-space: nowrap;
+}
+
+.post-category.deleted {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.post-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.post-title.deleted {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.comment-count-badge {
+  font-size: 0.8em;
+  color: #007bff;
+  font-weight: bold;
+  margin-left: 3px;
+  white-space: nowrap;
+}
+
+.comment-count-cell {
+  font-weight: bold;
+  color: #333;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  font-weight: normal;
+}
+
+.pagination-button:disabled {
+  cursor: not-allowed;
+  background-color: #f0f0f0;
+  color: #aaa;
+  font-weight: normal;
+}
+
+.pagination-button.active {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 768px) {
+  .posts-header-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .search-input-group {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .sort-register-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .category-select,
+  .sort-select,
+  .register-button {
+    width: 100%;
+  }
+
+  .posts-table {
+    font-size: 0.9em;
+  }
+
+  .posts-table th,
+  .posts-table td {
+    padding: 6px;
+  }
+
+  .title-cell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-category,
+  .post-title,
+  .comment-count-badge {
+    width: 100%;
+    margin-right: 0;
+  }
+  .post-title {
+    white-space: normal;
+    text-overflow: clip;
+  }
+}
+
+@media (max-width: 480px) {
+  .posts-container {
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .posts-table {
+    font-size: 0.8em;
+  }
+}

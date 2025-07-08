@@ -1,0 +1,7 @@
+# Dockerfile.local
+FROM openjdk:21
+COPY .gcp/muggle-463904-xxx.json /app/gcp-key.json
+COPY build/libs/app.jar app.jar
+ENV GOOGLE_APPLICATION_CREDENTIALS=/app/gcp-key.json
+EXPOSE 8080
+ENTRYPOINT ["sh", "-c", "java -Dspring.profiles.active=prod -Dserver.port=$PORT -jar /app.jar"]
